@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+    
+<head>
+  <script src="https://www.w3schools.com/js/myScript.js"></script>      
+<style>
+    h2 {
+  border: 1px solid red;
+  outline: 5px dotted green;
+}
+
+
+</style>
+    <title> Chore List App - {{ title }} </title>
+
+</head>
+    <body>
+        <navbar>
+            <a href="/"> Home</a>
+            <a href="/create_chore">  Add New Chore</a>
+        </navbar>
+        <h1><strong>
+            Chore List App - {{ title }}</strong>
+        </h1>
+        {% block body %}
+        
+    
+    <p>Enter names in the fields, then click "Submit" to submit the form:</p>
+
+<form method='POST'>
+{{ form.hidden_tag() }} 
+{{ form.name.label }}
+{{ form.name }}
+{{ form.chore_description.label }}
+{{ form.chore_description.label }}
+{{ form.charge.label }}
+{{ form.charge }}
+{{ form.job_done.label }}
+{{ form.job_done }}
+{{ form.submit }}
+
+
+
+</form> 
+
+
+
+    
+
+    
+    
+    
+{% endblock body %}
+    </body>
+
+ </html>
+
