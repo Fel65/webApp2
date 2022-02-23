@@ -5,7 +5,7 @@ from application.forms import ChoreForm
 
 @app.route('/')
 def home():
-    all_chores = Choress.query.all()
+    all_chores = Chore.query.all()
     return render_template("index.html", all_chores = all_chores, title="Home")
 
 
@@ -15,7 +15,7 @@ def create_chore():
     
     if request.method == "POST":
     
-        new_chore = Chores(
+        new_chore = Chore(
             description=form.description.data,
             charge=form.description.data, 
             address=form.description.data,
@@ -24,6 +24,6 @@ def create_chore():
         db.session.add(new_chore)
         db.session.commit()
         return redirect(url_for("home"))
-    return render_template("create_chore.html", title="Add a Chore", form=form)
+    return render_template("layout.html", title="Add a Chore", form=form)
 
 
