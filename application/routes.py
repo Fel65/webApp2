@@ -24,6 +24,7 @@ def create_chore():
         db.session.add(new_chore)
         db.session.commit()
         return redirect(url_for("home"))
-    return render_template("layout.html", title="Add a Chore", form=form)
+    return render_template("layout
+    .html", title="Add a Chore", form=form)
 
 
