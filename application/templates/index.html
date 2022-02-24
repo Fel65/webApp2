@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<p>
+
+    <h2> Here are the chores you need to do!</h2>
+    
+
+</p>
+<p>{% for chore in all_chores %}<br>
+   {{chore.description}}<br>
+
+
+</p> {% endfor %}
+
+
+{% endblock body %}
