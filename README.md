@@ -1,4 +1,4 @@
-# choreAPP List
+# choreAPP Lists
 
 Your task is to create a **basic web application** with **Flask** that allows the user to track the things that they need to do.
 
